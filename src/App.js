@@ -23,7 +23,8 @@ class App extends Component {
     this.setState({
       city: data.name,
       temperature: data.main.temp,
-      country: data.sys.country
+      country: data.sys.country,
+      description: data.weather[0].description
     })
   }
 
@@ -35,6 +36,8 @@ class App extends Component {
         <Weather 
         city={this.state.city}
         temperature={this.state.temperature}
+        country={this.state.country}
+        description={this.state.description}
         />
       </div>
     );
